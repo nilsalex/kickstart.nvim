@@ -583,6 +583,12 @@ local servers = {
       -- diagnostics = { disable = { 'missing-fields' } },
     },
   },
+
+  tsserver = {},
+  tailwindcss = {},
+  dockerls = {},
+
+  kotlin_language_server = {},
 }
 
 -- Setup neovim lua configuration
