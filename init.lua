@@ -580,6 +580,8 @@ local servers = {
   dockerls = {},
 
   kotlin_language_server = {},
+
+  rust_analyzer = {},
 }
 
 -- Setup neovim lua configuration
