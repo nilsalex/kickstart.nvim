@@ -1,11 +1,9 @@
 {
   description = "nvim config";
 
-  inputs = {
-    nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
-  };
+  inputs = { };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self }:
     let
       system = "x86_64-linux";
     in {
