@@ -1,14 +1,16 @@
+local api_token = os.getenv("TNG_LLM_TOKEN")
+
 return {
   {
     "huggingface/llm.nvim",
     opts = {
-      api_token = vim.env.TNG_LLM_TOKEN,
+      api_token = api_token,
       backend = "tgi",
-      url = "https://codepilot.model.tngtech.com/api/generate",
+      url = "https://chat.model.tngtech.com/api/generate",
       tokens_to_clear = { "<|endoftext|>" },
       request_body = {
         parameters = {
-          max_new_tokens = 60,
+          max_new_tokens = 300,
           temperature = 0.2,
           top_p = 0.95,
           stop_tokens = nil,
@@ -30,8 +32,9 @@ return {
       },
       tokenizer = nil,
       context_window = 8192,
-      enable_suggestions_on_startup = false,
+      enable_suggestions_on_startup = true,
       enable_suggestions_on_files = "*",
     },
+
   },
 }
