@@ -32,7 +32,7 @@ return {
       },
       tokenizer = nil,
       context_window = 8192,
-      enable_suggestions_on_startup = true,
+      enable_suggestions_on_startup = false,
       enable_suggestions_on_files = "*",
     },
 
