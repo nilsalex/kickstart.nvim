@@ -6,7 +6,7 @@ return {
     opts = {
       api_token = api_token,
       backend = "tgi",
-      url = "https://chat.model.tngtech.com/api/generate",
+      url = "https://codepilot.model.tngtech.com/api/generate",
       tokens_to_clear = { "<|endoftext|>" },
       request_body = {
         parameters = {
