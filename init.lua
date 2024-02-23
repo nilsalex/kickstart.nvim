@@ -79,9 +79,6 @@ require('lazy').setup({
   -- rust
   'mrcjkb/rustaceanvim',
 
-  -- copilot
-  'github/copilot.vim',
-
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -122,7 +119,16 @@ require('lazy').setup({
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
+
+      -- copilot
+      {
+        'zbirenbaum/copilot.lua',
+        config = function()
+          require('copilot').setup({})
+        end,
+      },
     },
+
   },
 
   -- Useful plugin to show you pending keybinds.
@@ -680,6 +686,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
--- fix copilot
-vim.g.copilot_assume_mapped = true
