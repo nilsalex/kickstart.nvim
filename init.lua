@@ -614,6 +614,8 @@ local servers = {
   kotlin_language_server = {},
 
   hls = { filetypes = { 'haskell', 'lhaskell', 'cabal' } },
+
+  nil_ls = {},
 }
 
 -- Setup neovim lua configuration
