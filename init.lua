@@ -618,6 +618,10 @@ local servers = {
   nil_ls = {},
 
   zls = {},
+
+  omnisharp = {
+    cmd = { "OmniSharp", "-lsp" },
+  },
 }
 
 -- Setup neovim lua configuration
