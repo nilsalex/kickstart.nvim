@@ -612,6 +612,7 @@ local servers = {
   dockerls = {},
   terraformls = {},
   tflint = {},
+  pyright = {},
 
   kotlin_language_server = {},
 
