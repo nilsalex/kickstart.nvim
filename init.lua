@@ -640,6 +640,7 @@ require('lazy').setup({
         terraformls = {},
         tflint = {},
         pyright = {},
+        helm_ls = {},
 
         kotlin_language_server = {},
 
