@@ -639,7 +639,12 @@ require('lazy').setup({
 
         kotlin_language_server = {},
 
-        hls = { filetypes = { 'haskell', 'lhaskell', 'cabal' } },
+        hls = {
+          filetypes = { 'haskell', 'lhaskell' },
+          haskell = {
+            formattingProvider = 'fourmolu',
+          },
+        },
 
         nil_ls = {},
 
@@ -699,7 +704,6 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         nix = { 'nixfmt' },
-        haskell = { 'fourmolu' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
