@@ -629,7 +629,7 @@ require('lazy').setup({
           },
         },
 
-        tsserver = {},
+        ts_ls = {},
         tailwindcss = {},
         dockerls = {},
         terraformls = {},
