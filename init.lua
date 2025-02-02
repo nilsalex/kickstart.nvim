@@ -641,6 +641,7 @@ require('lazy').setup({
         tflint = {},
         pyright = {},
         helm_ls = {},
+        cssls = {},
 
         kotlin_language_server = {},
 
