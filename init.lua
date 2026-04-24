@@ -810,13 +810,11 @@ require('lazy').setup({
     },
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+  -- Colorschemes
+  -- You can easily switch between colorschemes with `:Telescope colorscheme` or `:colorscheme <name>`
+  {
     'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+    priority = 1000,
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
@@ -824,11 +822,22 @@ require('lazy').setup({
           comments = { italic = false }, -- Disable italics in comments
         },
       }
+    end,
+  },
 
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-moon'
+  {
+    'navarasu/onedark.nvim',
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require('onedark').setup {
+        style = 'dark', -- Options: 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer'
+        colors = {
+          bg0 = '#282c34', -- OneDark's characteristic dark background
+        },
+      }
+      -- Load OneDark as the default colorscheme
+      require('onedark').load()
     end,
   },
 
