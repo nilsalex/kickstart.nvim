@@ -810,31 +810,13 @@ require('lazy').setup({
     },
   },
 
-  -- Colorschemes
-  -- You can easily switch between colorschemes with `:Telescope colorscheme` or `:colorscheme <name>`
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
-        styles = {
-          comments = { italic = false }, -- Disable italics in comments
-        },
-      }
-    end,
-  },
-
   {
     'navarasu/onedark.nvim',
     priority = 1000,
     lazy = false,
     config = function()
       require('onedark').setup {
-        style = 'dark', -- Options: 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer'
-        colors = {
-          bg0 = '#282c34', -- OneDark's characteristic dark background
-        },
+        style = 'dark',
       }
       -- Load OneDark as the default colorscheme
       require('onedark').load()
