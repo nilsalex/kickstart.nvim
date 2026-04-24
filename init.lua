@@ -970,6 +970,8 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 
+  -- Rustaceanvim provides enhanced Rust support and automatically configures rust-analyzer
+  -- No need to add rust_analyzer to the servers table above
   'mrcjkb/rustaceanvim',
 }, { ---@diagnostic disable-line: missing-fields
   ui = {
@@ -996,7 +998,19 @@ require('lazy').setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- Jenkinsfile filetype detection
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
   pattern = 'Jenkinsfile',
   command = 'set filetype=groovy',
+})
+
+-- Configure indentation for JavaScript and TypeScript
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'javascript', 'typescript' },
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+    vim.bo.shiftwidth = 4
+    vim.bo.expandtab = true
+  end,
 })
